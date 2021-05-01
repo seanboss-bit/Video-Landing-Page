@@ -14,7 +14,12 @@
         <div class="container">
            <nav class="navbar">
                <h2>Travel</h2>
-               <ul>
+               <div class="bars">
+                   <span></span>
+                   <span></span>
+                   <span></span>
+               </div>
+               <ul class="links">
                    <a href="Home.html">Home</a>
                    <a href="#">Contact</a>
                    <a href="#">Services</a>
@@ -116,5 +121,17 @@
             </div>
         </div>
     </section>
+    <footer>
+        <p>Copyrights &copy; 2021</p>
+    </footer>
+    <script>
+        const toggle = document.querySelector('.bars')
+        const links = document.querySelector('.links')
+
+        toggle.addEventListener('click', function(){
+            toggle.classList.toggle('active')
+            links.classList.toggle('active')
+        })
+    </script>
 </body>
 </html>

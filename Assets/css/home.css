@@ -26,3 +26,113 @@ a.button {
   letter-spacing: 3px;
   color: #5fbff9;
 }
+/* Hamburger */
+.bars {
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 1002;
+  display: none;
+}
+.bars span {
+  display: block;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0;
+  position: relative;
+  transition: 0.3s linear;
+}
+footer{
+  color: white;
+  background-color: rgb(177, 177, 177);
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+@media screen  and (max-width: 768px){
+  .links {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.527) !important;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 80px 120px !important;
+    z-index: 1001;
+    transition: 0.3s linear;
+  }
+  .bars {
+    display: block;
+    margin-left: 50%;
+  }
+  .links a {
+    display: block;
+    font-size: 24px;
+    margin: 30px 0;
+    color: black;
+    text-align: center;
+  }
+  .links.active {
+    right: 0;
+    width: 100%;
+    max-width: 740px;
+    display: block;
+  }
+  .bars.active span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+  .bars.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .bars.active span:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
+
+}
+@media screen and (max-width: 300px){
+  .links {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding: 80px 90px !important;
+    z-index: 1001;
+    transition: 0.3s linear;
+  }
+  .bars {
+    display: block;
+    margin-left: 30%;
+  }
+  .links a {
+    display: block;
+    font-size: 24px;
+    margin: 30px 0;
+    color: white;
+    text-align: center;
+  }
+  .links.active {
+    right: 0;
+    width: 100%;
+    max-width: 740px;
+  }
+  .bars.active span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 4px;
+  }
+  .bars.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .bars.active span:nth-child(3) {
+    transform: rotate(45deg);
+    bottom: 14px;
+  }
+}
